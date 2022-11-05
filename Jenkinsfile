@@ -14,8 +14,6 @@ pipeline
          stage('build'){
             steps{
               script{
-                sh "npm install"
-
                 sh "ansible-playbook ansible/build.yml  -i ansible/inventory/host.yml" 
 
 }
