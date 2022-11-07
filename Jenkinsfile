@@ -5,7 +5,7 @@ pipeline
          stage('pull'){
             steps{
               script{
-                checkout([$class: 'GitSCM' , branches: [[name: '*/achref']],
+                checkout([$class: 'GitSCM' , branches: [[name: '*/achref-dridi']],
                     userRemoteConfigs:[[
                        url: 'https://github.com/achrefdridi1/CDproject.git']]])
 }
@@ -14,7 +14,8 @@ pipeline
          stage('build'){
             steps{
               script{
-                sh "ansible-playbook ansible/build.yml  -i ansible/inventory/host.yml" 
+                sh "npm install"
+                sh "ansible-playbook ansible/roles/build.yml  -i ansible/inventory/host.yml -e 'ansible_become_password=ansible' -vvv "
 
 }
 }
