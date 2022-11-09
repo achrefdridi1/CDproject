@@ -7,6 +7,6 @@
 - name: Tag and push to docker hub
   docker_image:
     name: devops
-    repository: achref98/projetcd
+    repository: achref98/devops
     push: yes
     source: local
