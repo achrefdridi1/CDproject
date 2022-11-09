@@ -1,0 +1,12 @@
+---
+# tasks file for docker-registry
+- name: log into docker hub registy
+  docker_login:
+    username: achref98
+    password: 07493275Ach
+- name: Tag and push to docker hub
+  docker_image:
+    name: devops
+    repository: achref98/projetcd
+    push: yes
+    source: local
