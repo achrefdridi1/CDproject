@@ -24,8 +24,16 @@ pipeline
 	   steps{
 	     script{
 		sh "ansible-playbook ansible/docker.yml  -i ansible/inventory/host.yml -e 'ansible_become_password=ansible'     "
+		
 }
 }
 }    
+	stage ('docker hub'){
+	   steps{
+	     script{
+		sh "ansible-playbook ansible/docker-registry.yml  -i ansible/inventory/host.yml -e 'ansible_become_password=ansible'     "
+}
+}
+}   
 }
 }
