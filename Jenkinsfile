@@ -36,11 +36,21 @@ pipeline
 }
 }
 	stage ('Monitoring'){
-
+	  steps{
 }
-
-
-
+}
 
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
