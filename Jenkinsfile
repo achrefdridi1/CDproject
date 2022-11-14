@@ -35,13 +35,10 @@ pipeline
 }
 }
 }
- stage ('Monitoring'){
-steps{
-script{
-sh " docker-compose up "
+stage ('Monitoring'){
+
 }
-}
-}
+
 
 
 
