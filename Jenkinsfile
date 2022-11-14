@@ -34,6 +34,16 @@ pipeline
 		sh "ansible-playbook ansible/docker-registry.yml  -i ansible/inventory/host.yml -e 'ansible_become_password=ansible'     "
 }
 }
-}   
+}
+ stage ('Monitoring'){
+steps{
+script{
+sh "docker-compose up --build  -d"
+}
+}
+}
+
+
+
 }
 }
