@@ -35,7 +35,7 @@ pipeline
 }
 }
 }
-stage ('Monitoring'){
+	stage ('Monitoring'){
 
 }
 
