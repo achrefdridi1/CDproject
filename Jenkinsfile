@@ -38,7 +38,7 @@ pipeline
  stage ('Monitoring'){
 steps{
 script{
-sh "docker-compose up --build  -d"
+sh " docker-compose up "
 }
 }
 }
